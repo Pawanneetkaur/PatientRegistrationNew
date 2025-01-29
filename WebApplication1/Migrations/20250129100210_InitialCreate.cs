@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace WebApplication1.Migrations
+namespace PatientRegistrationService.Migrations
 {
     /// <inheritdoc />
     public partial class InitialCreate : Migration
@@ -16,13 +16,13 @@ namespace WebApplication1.Migrations
                 {
                     MedicalRecordNumber = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Age = table.Column<int>(type: "int", nullable: true),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Age = table.Column<int>(type: "int", nullable: false),
                     Gender = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Contacts = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    AdmittingDiagnosis = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    AttendingPhysician = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Department = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Contacts = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    AdmittingDiagnosis = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    AttendingPhysician = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Department = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
